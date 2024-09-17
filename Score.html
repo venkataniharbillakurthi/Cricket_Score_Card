@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 10px 0px;
+        }
+        .nav #TA{
+            margin-left: -30px;
+            margin-right: 180px;
+        }
+        
+        .main{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        .main .middle{
+            width: 10%;
+            margin-left: 10px;
+            margin-right: -25px;
+        }
+        .main .middle button{
+            padding: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+
+        }
+        .main .left{
+            width:40%;
+            border: 1px solid black;
+            height: 330px;
+        }
+        .lefth3{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .leftinput{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+            height: 100px;
+        }
+        .leftinput .lvalue,.lvalue1{
+            width: 130px;
+            height: 100px;
+            border: 1px solid;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            font-size: 70px;
+        }
+        .leftinput .lvalue1{
+            text-decoration: none;
+        }
+        .leftinput1 .lvalue2{
+            width: 130px;
+            border: 1px solid;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+        }
+        .scores{
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            margin-top: 20px;
+            margin-left: 150px;
+        }
+        .scores button{
+            cursor: pointer;
+        }
+        .wickets{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+            width: 100px;
+            margin-left: 190px;
+        }
+        .wickets button{
+            cursor: pointer;
+        }
+        .Overs{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+            width: 100px;
+            margin-left: 190px;
+        }
+        .Overs button{
+            cursor: pointer;
+        }
+        .leftinput1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            width: 200px;
+            margin-left: 150px;
+        }
+        .main h3{
+            text-decoration:underline;
+            margin-top: 10px;
+        }
+        .main .right{
+            width:40%;
+            border: 1px solid black;
+            height: 330px;
+        }
+        .righth3{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .rightinput{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+            height: 100px;
+        }
+        .rightinput .rvalue,.rvalue1{
+            width: 130px;
+            height: 100px;
+            border: 1px solid;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            font-size: 70px;
+        }
+        .rightinput .rvalue1{
+            text-decoration: none;
+        }
+        .rightinput1 .rvalue2{
+            width: 130px;
+            border: 1px solid;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+        }
+        .scores{
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+            margin-top: 20px;
+            margin-left: 150px;
+        }
+        .scores button{
+            cursor: pointer;
+        }
+        .wickets{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+            width: 100px;
+            margin-left: 190px;
+        }
+        .wickets button{
+            cursor: pointer;
+        }
+        .Overs{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 20px;
+            width: 100px;
+            margin-left: 190px;
+        }
+        .Overs button{
+            cursor: pointer;
+        }
+        .rightinput1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            width: 200px;
+            margin-left: 150px;
+        }
+        
+        #text {
+            background-color: black;
+            color: white;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .Result{
+            margin-top: 10px;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            padding: 20px;
+            border-radius: 20px;
+            
+        }
+        
+         
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h1 id="TA">Team A </h1>
+        <h1 id="TB">Team B</h1>
+    </div>
+    <div class="main">
+        <div class="left">
+            <div class="lefth3">
+                <h3>Score</h3>
+                <h3>Wickets</h3>
+            </div>
+            <div class="leftinput">
+                <h3 class="lvalue">0</h3>
+                <h3 class="lvalue1">0</h3>
+            </div>
+            <div class="leftinput1">
+                <h4>Overs: </h4>
+                <h3 class="lvalue2">0</h3>
+            </div>
+            <div class="scores">
+                <h4>Score:</h4>
+                <button  class="Score1">1</button>
+                <button class="Score2">2</button>
+                <button class="Score3">3</button>
+                <button class="Score4">4</button>
+                <button class="Score6">6</button>
+            </div>
+            <div class="wickets">
+                <h4>Wicket: </h4>
+                <button class="Wicket1">Down</button>
+            </div>
+            <div class="Overs">
+                <h4>Overs: </h4>
+                <button class="Over">20</button>
+            </div>
+        </div>
+        <div class="middle">
+            <button class="Reset">RESET</button>
+        </div>
+        <div class="right">
+            <div class="righth3">
+                <h3>Score</h3>
+                <h3>Wickets</h3>
+            </div>
+            <div class="rightinput">
+                <h3 class="rvalue">0</h3>
+                <h3 class="rvalue1">0</h3>
+            </div>
+            <div class="rightinput1">
+                <h4>Overs: </h4>
+                <h3 class="rvalue2">0</h3>
+            </div>
+            <div class="scores">
+                <h4>Score:</h4>
+                <button class="Score11">1</button>
+                <button class="Score22">2</button>
+                <button class="Score33">3</button>
+                <button class="Score44">4</button>
+                <button class="Score66">6</button>
+            </div>
+            <div class="wickets">
+                <h4>Wicket: </h4>
+                <button class="Wicket11">Down</button>
+            </div>
+            <div class="Overs">
+                <h4>Overs: </h4>
+                <button class="Over1" >20</button>
+            </div>
+        </div>   
+    </div>
+    <center><button class="Result" onclick="Result()">Result</button></center>
+    <center><h1 id="text">Start the Game....</h1></center>
+    
+
+    <script>
+        let LeftScorebox = document.querySelector(".leftinput .lvalue")
+        let LeftWicketbox = document.querySelector(".lvalue1")
+        let OverInput = document.querySelector(".lvalue2")
+        let Score1 = document.querySelector(".Score1")
+        let Score2 = document.querySelector(".Score2")
+        let Score3 = document.querySelector(".Score3")
+        let Score4 = document.querySelector(".Score4")
+        let Score6 = document.querySelector(".Score6")
+        let Wicket1 = document.querySelector(".Wicket1")
+        let Overs = document.querySelector(".Over")
+        let RESET = document.querySelector(".Reset")
+        let RESULT = document.querySelector(".Result")
+        let TEXT = document.getElementById("text")
+
+        let value = 0;
+        let wicket = 0;
+        let over = 0;
+
+        Score1.onclick = function(){
+            ++value
+            LeftScorebox.textContent = value
+            LeftScorebox.style.backgroundColor = "green"
+            LeftScorebox.style.color = "white"
+        }
+        Score2.onclick = function(){
+            ++value
+            ++value
+            LeftScorebox.textContent = value
+            LeftScorebox.style.backgroundColor = "green"
+            LeftScorebox.style.color = "white"
+        }
+        Score3.onclick = function(){
+            ++value
+            ++value
+            ++value
+            LeftScorebox.textContent = value
+            LeftScorebox.style.backgroundColor = "green"
+            LeftScorebox.style.color = "white"
+        }
+        Score4.onclick = function(){
+            ++value
+            ++value
+            ++value
+            ++value
+            LeftScorebox.textContent = value
+            LeftScorebox.style.backgroundColor = "green"
+            LeftScorebox.style.color = "white"
+        }
+        Score6.onclick = function(){
+            ++value
+            ++value
+            ++value
+            ++value
+            ++value
+            ++value
+            LeftScorebox.textContent = value
+            LeftScorebox.style.backgroundColor = "green"
+            LeftScorebox.style.color = "white"
+
+        }
+        Wicket1.onclick = function(){
+            ++wicket
+            LeftWicketbox.textContent = wicket
+            LeftWicketbox.style.backgroundColor = "red"
+            LeftWicketbox.style.color = "white"
+            if (wicket === 10){
+                LeftWicketbox.textContent = 10
+            }else if(wicket > 10){
+                LeftWicketbox.textContent = 10 
+            }    
+        }
+        Overs.onclick = function(){
+            ++over
+            OverInput.textContent = over
+            OverInput.style.backgroundColor = "orange"
+            if (over > 20){
+                OverInput.textContent = 20
+            }
+        }
+        
+
+        let RightScorebox = document.querySelector(".rvalue")
+        let RightWicketbox = document.querySelector(".rvalue1")
+        let OverInput1 = document.querySelector(".rvalue2")
+        let Score11 = document.querySelector(".Score11")
+        let Score22 = document.querySelector(".Score22")
+        let Score33 = document.querySelector(".Score33")
+        let Score44 = document.querySelector(".Score44")
+        let Score66 = document.querySelector(".Score66")
+        let Wicket11 = document.querySelector(".Wicket11")
+        let Overss = document.querySelector(".Over1")
+
+        let value1 = 0;
+        let wicket1 = 0;
+        let over1 = 0;
+
+        Score11.onclick = function(){
+            ++value1
+            RightScorebox.textContent = value1
+            RightScorebox.style.backgroundColor = "green"
+            RightScorebox.style.color = "white"
+        }
+        Score22.onclick = function(){
+            ++value1
+            ++value1
+            RightScorebox.textContent = value1
+            RightScorebox.style.backgroundColor = "green"
+            RightScorebox.style.color = "white"
+        }
+        Score33.onclick = function(){
+            ++value1
+            ++value1
+            ++value1
+            RightScorebox.textContent = value1
+            RightScorebox.style.backgroundColor = "green"
+            RightScorebox.style.color = "white"
+        }
+        Score44.onclick = function(){
+            ++value1
+            ++value1
+            ++value1
+            ++value1
+            RightScorebox.textContent = value1
+            RightScorebox.style.backgroundColor = "green"
+            RightScorebox.style.color = "white"
+        }
+        Score66.onclick = function(){
+            ++value1
+            ++value1
+            ++value1
+            ++value1
+            ++value1
+            ++value1
+            RightScorebox.textContent = value1
+            RightScorebox.style.backgroundColor = "green"
+            RightScorebox.style.color = "white"
+        }
+        Wicket11.onclick = function(){
+            ++wicket1
+            RightWicketbox.textContent = wicket1
+            RightWicketbox.style.backgroundColor = "red"
+            RightWicketbox.style.color = "white"
+            if (wicket1 === 10){
+                RightWicketbox.textContent = 10
+            }else if(wicket1 > 10){
+                RightWicketbox.textContent = 10 
+            }  
+        }
+        Overss.onclick = function(){
+            ++over1
+            OverInput1.textContent = over1
+            OverInput1.style.backgroundColor = "orange"
+            if (over1 > 20){
+                OverInput1.textContent = 20
+            }
+        }
+        RESET.onclick = function(){
+            LeftScorebox.textContent = 0
+            LeftWicketbox.textContent = 0
+            OverInput.textContent = 0
+            OverInput1.textContent = 0
+            RightScorebox.textContent = 0
+            RightWicketbox.textContent = 0
+            TEXT.textContent = 'Start the Game....'
+            TEXT.style.backgroundColor = "black"
+        }
+        function Result(){
+            if(value > value1){
+                TEXT.textContent = 'Team A Won the Match!'
+                TEXT.style.backgroundColor = "Green"
+            }else if(value1 > value){
+                TEXT.textContent = 'Team B Won the Match!'
+                TEXT.style.backgroundColor = "Green"
+            }
+        } 
+        
+    </script>
+</body>
+</html>
