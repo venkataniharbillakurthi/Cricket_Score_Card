@@ -291,6 +291,7 @@
     
 
     <script>
+        let Left = document.querySelector(".left")
         let LeftScorebox = document.querySelector(".leftinput .lvalue")
         let LeftWicketbox = document.querySelector(".lvalue1")
         let OverInput = document.querySelector(".lvalue2")
@@ -371,7 +372,7 @@
             }
         }
         
-
+        let Right = document.querySelector(".right")
         let RightScorebox = document.querySelector(".rvalue")
         let RightWicketbox = document.querySelector(".rvalue1")
         let OverInput1 = document.querySelector(".rvalue2")
@@ -456,14 +457,35 @@
             RightWicketbox.textContent = 0
             TEXT.textContent = 'Start the Game....'
             TEXT.style.backgroundColor = "black"
+            Left.style.backgroundColor = "white"
+            Right.style.backgroundColor = "white"
+            RightScorebox.style.backgroundColor = "white"
+            LeftScorebox.style.backgroundColor = "white"
+            RightWicketbox.style.backgroundColor = "white"
+            LeftWicketbox.style.backgroundColor = "white"
+            LeftScorebox.style.color = "black"
+            RightScorebox.style.color = "black"
+            LeftWicketbox.style.color = "black"
+            RightWicketbox.style.color = "black"
+            OverInput.style.backgroundColor = "white"
+            OverInput1.style.backgroundColor = "white"
+            OverInput.style.color = "black"
+            OverInput1.style.color = "black"
+
+
         }
         function Result(){
             if(value > value1){
                 TEXT.textContent = 'Team A Won the Match!'
                 TEXT.style.backgroundColor = "Green"
+                Left.style.backgroundColor = "lightGreen"
+                Right.style.backgroundColor = "red"
+
             }else if(value1 > value){
                 TEXT.textContent = 'Team B Won the Match!'
                 TEXT.style.backgroundColor = "Green"
+                Right.style.backgroundColor = "lightGreen"
+                Left.style.backgroundColor = "red"
             }
         } 
         
