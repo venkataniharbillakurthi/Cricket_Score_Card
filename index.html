@@ -10,12 +10,15 @@
             padding: 0%;
             box-sizing: border-box;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: ;
         }
+        
         .nav{
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             margin: 10px 0px;
+            
         }
         .nav #TA{
             margin-left: -30px;
@@ -44,6 +47,7 @@
             width:40%;
             border: 1px solid black;
             height: 330px;
+            background-color: rgba(255, 255, 255, 0.388);
         }
         .lefth3{
             display: flex;
@@ -122,6 +126,7 @@
             width:40%;
             border: 1px solid black;
             height: 330px;
+            background-color: rgba(255, 255, 255, 0.388);
         }
         .righth3{
             display: flex;
@@ -216,75 +221,79 @@
          
     </style>
 </head>
-<body>
-    <div class="nav">
-        <h1 id="TA">Team A </h1>
-        <h1 id="TB">Team B</h1>
-    </div>
-    <div class="main">
-        <div class="left">
-            <div class="lefth3">
-                <h3>Score</h3>
-                <h3>Wickets</h3>
-            </div>
-            <div class="leftinput">
-                <h3 class="lvalue">0</h3>
-                <h3 class="lvalue1">0</h3>
-            </div>
-            <div class="leftinput1">
-                <h4>Overs: </h4>
-                <h3 class="lvalue2">0</h3>
-            </div>
-            <div class="scores">
-                <h4>Score:</h4>
-                <button  class="Score1">1</button>
-                <button class="Score2">2</button>
-                <button class="Score3">3</button>
-                <button class="Score4">4</button>
-                <button class="Score6">6</button>
-            </div>
-            <div class="wickets">
-                <h4>Wicket: </h4>
-                <button class="Wicket1">Down</button>
-            </div>
-            <div class="Overs">
-                <h4>Overs: </h4>
-                <button class="Over">20</button>
-            </div>
+<body style="background-image: url('./crickect.png');
+background-attachment: fixed;
+background-size:100%100%;">
+    <div class="home">
+        <div class="nav">
+            <h1 id="TA">Team A </h1>
+            <h1 id="TB">Team B</h1>
         </div>
-        <div class="middle">
-            <button class="Reset">RESET</button>
+        <div class="main">
+            <div class="left">
+                <div class="lefth3">
+                    <h3>Score</h3>
+                    <h3>Wickets</h3>
+                </div>
+                <div class="leftinput">
+                    <h3 class="lvalue">0</h3>
+                    <h3 class="lvalue1">0</h3>
+                </div>
+                <div class="leftinput1">
+                    <h4>Overs: </h4>
+                    <h3 class="lvalue2">0</h3>
+                </div>
+                <div class="scores">
+                    <h4>Score:</h4>
+                    <button  class="Score1">1</button>
+                    <button class="Score2">2</button>
+                    <button class="Score3">3</button>
+                    <button class="Score4">4</button>
+                    <button class="Score6">6</button>
+                </div>
+                <div class="wickets">
+                    <h4>Wicket: </h4>
+                    <button class="Wicket1">Down</button>
+                </div>
+                <div class="Overs">
+                    <h4>Overs: </h4>
+                    <button class="Over">20</button>
+                </div>
+            </div>
+            <div class="middle">
+                <button class="Reset">RESET</button>
+            </div>
+            <div class="right">
+                <div class="righth3">
+                    <h3>Score</h3>
+                    <h3>Wickets</h3>
+                </div>
+                <div class="rightinput">
+                    <h3 class="rvalue">0</h3>
+                    <h3 class="rvalue1">0</h3>
+                </div>
+                <div class="rightinput1">
+                    <h4>Overs: </h4>
+                    <h3 class="rvalue2">0</h3>
+                </div>
+                <div class="scores">
+                    <h4>Score:</h4>
+                    <button class="Score11">1</button>
+                    <button class="Score22">2</button>
+                    <button class="Score33">3</button>
+                    <button class="Score44">4</button>
+                    <button class="Score66">6</button>
+                </div>
+                <div class="wickets">
+                    <h4>Wicket: </h4>
+                    <button class="Wicket11">Down</button>
+                </div>
+                <div class="Overs">
+                    <h4>Overs: </h4>
+                    <button class="Over1" >20</button>
+                </div>
+            </div>   
         </div>
-        <div class="right">
-            <div class="righth3">
-                <h3>Score</h3>
-                <h3>Wickets</h3>
-            </div>
-            <div class="rightinput">
-                <h3 class="rvalue">0</h3>
-                <h3 class="rvalue1">0</h3>
-            </div>
-            <div class="rightinput1">
-                <h4>Overs: </h4>
-                <h3 class="rvalue2">0</h3>
-            </div>
-            <div class="scores">
-                <h4>Score:</h4>
-                <button class="Score11">1</button>
-                <button class="Score22">2</button>
-                <button class="Score33">3</button>
-                <button class="Score44">4</button>
-                <button class="Score66">6</button>
-            </div>
-            <div class="wickets">
-                <h4>Wicket: </h4>
-                <button class="Wicket11">Down</button>
-            </div>
-            <div class="Overs">
-                <h4>Overs: </h4>
-                <button class="Over1" >20</button>
-            </div>
-        </div>   
     </div>
     <center><button class="Result" onclick="Result()">Result</button></center>
     <center><h1 id="text">Start the Game....</h1></center>
@@ -372,7 +381,7 @@
             }
         }
         
-        let Right = document.querySelector(".right")    
+        let Right = document.querySelector(".right")
         let RightScorebox = document.querySelector(".rvalue")
         let RightWicketbox = document.querySelector(".rvalue1")
         let OverInput1 = document.querySelector(".rvalue2")
@@ -457,20 +466,22 @@
             RightWicketbox.textContent = 0
             TEXT.textContent = 'Start the Game....'
             TEXT.style.backgroundColor = "black"
-            Left.style.backgroundColor = "white"
-            Right.style.backgroundColor = "white"
-            RightScorebox.style.backgroundColor = "white"
-            LeftScorebox.style.backgroundColor = "white"
-            RightWicketbox.style.backgroundColor = "white"
-            LeftWicketbox.style.backgroundColor = "white"
+            Left.style.backgroundColor = "rgba(255, 255, 255, 0.388)"
+            Right.style.backgroundColor = "rgba(255, 255, 255, 0.388)"
+            RightScorebox.style.backgroundColor = "rgba(255, 255, 255, 0.388)"
+            LeftScorebox.style.backgroundColor = "rgba(255, 255, 255, 0.388)"
+            RightWicketbox.style.backgroundColor = "rgba(255, 255, 255, 0.388)"
+            LeftWicketbox.style.backgroundColor = "rgba(255, 255, 255, 0.388)"
             LeftScorebox.style.color = "black"
             RightScorebox.style.color = "black"
             LeftWicketbox.style.color = "black"
             RightWicketbox.style.color = "black"
-            OverInput.style.backgroundColor = "white"
-            OverInput1.style.backgroundColor = "white"
+            OverInput.style.backgroundColor = "rgba(255, 255, 255, 0.388)"
+            OverInput1.style.backgroundColor = "rgba(255, 255, 255, 0.388)"
             OverInput.style.color = "black"
             OverInput1.style.color = "black"
+
+
         }
         function Result(){
             if(value > value1){
@@ -478,6 +489,7 @@
                 TEXT.style.backgroundColor = "Green"
                 Left.style.backgroundColor = "lightGreen"
                 Right.style.backgroundColor = "red"
+
             }else if(value1 > value){
                 TEXT.textContent = 'Team B Won the Match!'
                 TEXT.style.backgroundColor = "Green"
